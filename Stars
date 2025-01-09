@@ -1,4 +1,4 @@
-//This Python program prints a triangular pattern of stars based on the number of rows specified by the user.
+# This Python program prints a triangular pattern of stars based on the number of rows specified by the user.
 
 def print_stars(rows):
     for i in range(1, rows + 1):
