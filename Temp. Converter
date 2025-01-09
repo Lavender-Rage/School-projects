@@ -1,0 +1,31 @@
+//This Python program serves as a simple temperature converter, allowing users to convert between Celsius and Fahrenheit. 
+
+def celsius_to_fahrenheit(celsius):
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
+
+def fahrenheit_to_celsius(fahrenheit):
+    celsius = (fahrenheit - 32) * 5/9
+    return celsius
+
+def main():
+    print("Welcome to the Temperature Converter Program!")
+    choice = input("Enter 'C' to convert Celsius to Fahrenheit, 'F' to convert Fahrenheit to Celsius, or 'Q' to quit: ").upper()
+    
+    if choice == 'C':
+        celsius = float(input("Enter the temperature in Celsius: "))
+        fahrenheit = celsius_to_fahrenheit(celsius)
+        print(f"{celsius} degrees Celsius is equal to {fahrenheit} degrees Fahrenheit.")
+    elif choice == 'F':
+        fahrenheit = float(input("Enter the temperature in Fahrenheit: "))
+        celsius = fahrenheit_to_celsius(fahrenheit)
+        
+        print(f"{fahrenheit} degrees Fahrenheit is equal to {celsius} degrees Celsius.")
+        
+    elif choice == 'Q':
+        print("Thank you for using the temperature converter program. Goodbye!")
+        return
+    else:
+        print("Invalid choice. Please enter 'C', 'F', or 'Q'.")
+
+main()
