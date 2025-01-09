@@ -1,0 +1,47 @@
+# This Python program uses the turtle graphics library to draw a simple and cheerful smiley face.
+import turtle
+
+# Setup the screen
+screen = turtle.Screen()
+screen.bgcolor("white")
+screen.title("Smiley Face")
+
+# Create a turtle object
+smiley_turtle = turtle.Turtle()
+smiley_turtle.speed(0)
+smiley_turtle.hideturtle()
+
+# Function to draw a circle
+def draw_circle(turtle_obj, radius, color):
+    turtle_obj.begin_fill()
+    turtle_obj.fillcolor(color)
+    turtle_obj.circle(radius)
+    turtle_obj.end_fill()
+
+# Draw the face
+smiley_turtle.penup()
+smiley_turtle.goto(0, -100)
+smiley_turtle.pendown()
+draw_circle(smiley_turtle, 100, "yellow")
+
+# Draw the left eye
+smiley_turtle.penup()
+smiley_turtle.goto(-35, 35)
+smiley_turtle.pendown()
+draw_circle(smiley_turtle, 10, "black")
+
+# Draw the right eye
+smiley_turtle.penup()
+smiley_turtle.goto(35, 35)
+smiley_turtle.pendown()
+draw_circle(smiley_turtle, 10, "black")
+
+# Draw the smile
+smiley_turtle.penup()
+smiley_turtle.goto(-40, -10)
+smiley_turtle.pendown()
+smiley_turtle.setheading(-60)
+smiley_turtle.circle(50, 120)
+
+# Finish
+turtle.done()
