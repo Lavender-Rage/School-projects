@@ -1,0 +1,65 @@
+// This Java program calculates the volume of a cylinder based on user input for the radius and height using a non-traditional approach with loops to simulate the calculations. 
+
+import java.util.Scanner;
+public class CylindVol {
+
+    public static void main(String[] args) {
+        
+        int radius, height, radSquared = 0, area = 0, volume = 0, i;
+        int fractionalV = 0; 
+
+        Scanner keyboard = new Scanner(System.in);
+        
+        System.out.print("Enter the radius of the cylinder: ");
+        radius = keyboard.nextInt();
+        System.out.print("Enter the height of the cylinder: ");
+        height = keyboard.nextInt();
+
+        i = 0;
+        while (i < radius) {
+            radSquared += radius;
+            i++;
+        }
+
+        i = 0;
+        while (i < radSquared) {
+            area += 31416; 
+            i++;
+        }
+
+        int scaledArea = 0; 
+        int fractionalArea = 0; 
+        while (area >= 10000) {
+            area -= 10000;
+            scaledArea++;
+        }
+        fractionalArea = area; 
+
+        i = 0;
+        while (i < height) {
+            volume += scaledArea;
+            fractionalV += fractionalArea;
+           
+            while (fractionalV >= 10000) {
+                volume++;
+                fractionalV -= 10000;
+            }
+            i++;
+        }
+
+        int fractionalPart = 0; 
+        int tempFraction = fractionalV; 
+        int count = 0;
+
+        while (count < 100) {
+            tempFraction += fractionalV;
+            count++;
+        }
+        
+        while (tempFraction >= 10000) {
+            tempFraction -= 10000;
+            fractionalPart++;
+        }
+        System.out.printf("Volume of the cylinder = %d.%02d%n", volume, fractionalPart);
+    }
+}
