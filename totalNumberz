@@ -1,4 +1,4 @@
-//This Python program calculates and prints the total sum of all numbers in a predefined list.
+# This Python program calculates and prints the total sum of all numbers in a predefined list.
 
 numberz = [51,90,35,47,73,56]
 total = 0
