@@ -1,0 +1,55 @@
+// This Java program counts the number of positive, negative, and zero numbers from five user-input values. 
+
+import java.util.Scanner;
+public class NumberCounter {
+
+    public static void main(String[] args) {
+        int num1, num2, num3, num4, num5;
+        Scanner keyboard = new Scanner(System.in);
+        
+        System.out.print("Enter the first number: ");
+        num1 = keyboard.nextInt();
+        
+        System.out.print("Enter the second number: ");
+        num2 = keyboard.nextInt();
+        
+        System.out.print("Enter the third number: ");
+        num3 = keyboard.nextInt();
+        
+        System.out.print("Enter the fourth number: ");
+        num4 = keyboard.nextInt();
+        
+        System.out.print("Enter the fifth number: ");
+        num5 = keyboard.nextInt();
+        
+        int pCount = 0;
+        int nCount = 0;
+        int zCount = 0;
+        
+        if (num1 > 0)  pCount++;
+        if (num1 < 0)  nCount++;
+        if (num1 == 0) zCount++;
+        
+        if (num2 > 0) pCount++;
+        if (num2 < 0) nCount++;
+        if (num2 == 0) zCount++;
+
+        if (num3 > 0) pCount++;
+        if (num3 < 0) nCount++;
+        if (num3 == 0) zCount++;
+
+        if (num4 > 0) pCount++;
+        if (num4 < 0) nCount++;
+        if (num4 == 0) zCount++;
+
+        if (num5 > 0) pCount++;
+        if (num5 < 0) nCount++;
+        if (num5 == 0) zCount++;
+
+        // Output the results
+        System.out.println("There are " + zCount + " zeros");
+        System.out.println("There are " + pCount + " positive numbers");
+        System.out.println("There are " + nCount + " negative numbers");  
+        
+    }
+}
