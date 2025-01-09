@@ -1,0 +1,1 @@
+Welcome to the School-Projects Repository! This repository features a variety of projects developed in Python and Java. The projects showcase a range of programming concepts, algorithms, and problem-solving strategies.
