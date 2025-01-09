@@ -1,0 +1,36 @@
+//This Java program determines if three given sides form a right triangle based on the Pythagorean Theorem. 
+
+import java.util.Scanner;
+
+public class RightTraingle {
+
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+        
+        System.out.print("Enter sideA number: ");
+        double sideA = keyboard.nextDouble();
+        
+        System.out.print("Enter sideB number: ");
+        double sideB = keyboard.nextDouble(); 
+        
+        System.out.print("Enter sideC number: ");
+        double sideC = keyboard.nextDouble();
+        
+        if(sideA <=0 || sideB <=0 || sideC <=0) {
+          System.out.print("Sides must be non-zero. ");
+          return;
+    }
+        double a = Math.min(sideA, Math.min(sideB, sideC));
+        double c = Math.max(sideA, Math.max(sideB, sideC));
+        double b = (sideA + sideB + sideC) - (a+c); 
+        
+        if(Math.pow(a, 2) + Math.pow(b, 2) == Math.pow(c, 2)) {
+          System.out.println("These are the sides of a right triangle. ");
+        }
+        else {
+           System.out.print("These are NOT the sides of a right triangle. ");
+        }
+        }
+        
+
+    }
