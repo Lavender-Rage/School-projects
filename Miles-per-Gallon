@@ -1,0 +1,17 @@
+//This Java program calculates and displays the miles-per-gallon (MPG) efficiency of a vehicle based on user input.
+
+import java.util.Scanner;
+public class Mavenproject2 {
+
+    public static void main(String[] args) {
+       Scanner input = new Scanner(System.in);
+       System.out.print("Enter the miles driven: ");
+       double miles = input.nextDouble();
+       System.out.print("Enter the gallons used: ");
+       double gallons = input.nextDouble();
+       
+       double mpg = miles / gallons;
+       
+        System.out.printf("Miles per gallon obtained: " +mpg);
+    }
+}
