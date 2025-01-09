@@ -1,0 +1,30 @@
+//This Java program calculates the smallest number of U.S. coins (half-dollars, quarters, dimes, nickels, and pennies) needed to make change for a given amount of cents.
+
+import java.util.Scanner;
+public class Makechange {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter amount in cents: ");
+        int cents = scanner.nextInt();
+        int halfdollars = cents / 50;
+        cents = cents %50;
+        
+        int quarters = cents / 25;
+        cents = cents % 25;
+        
+        int dimes = cents / 10;
+        cents = cents % 10;
+        
+        int nikels = cents / 5;
+        cents = cents % 5;
+        
+        int pennies = cents;
+        
+        System.out.println("Half-Dollars: " + halfdollars);
+        System.out.println("Quaters: " + quarters);
+        System.out.println("Dimes: " + dimes);
+        System.out.println("Nikels: " + nikels);
+        System.out.println("Pennies: " + pennies);
+    }
+}
