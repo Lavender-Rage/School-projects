@@ -1,0 +1,46 @@
+# This Python program uses the turtle graphics library to create a vibrant flower garden.
+import turtle
+import random
+
+# initializes the canvas with a lavender background and the title "Flower Garden."
+screen = turtle.Screen()
+screen.bgcolor("lavender")
+screen.title("Flower Garden")
+
+flower_t = turtle.Turtle() # object named flower_t is configured for drawing flowers.
+flower_t.speed(0)
+flower_t.hideturtle()
+
+# List of colors
+colors = ["yellow", "purple", "pink", "orange", "white", "gold", "grey", "light blue"]
+
+
+def draw_flower(t, x, y, petal_length, petal_width, flower_color):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.color(flower_color)
+    t.begin_fill()
+
+    for f in range(6):
+        t.circle(petal_width, 60)
+        t.left(120)
+        t.circle(petal_width, 60)
+        t.left(60)
+
+    t.end_fill()
+
+def flower_garden(num_flowers):
+    for f in range(num_flowers):
+        x = random.randint(-300, 300)
+        y = random.randint(-300, 300)
+        petal_length = random.randint(20, 50)
+        petal_width = random.randint(10, 25)
+        flower_color = random.choice(colors)  # Choose a single color from the list
+        draw_flower(flower_t, x, y, petal_length, petal_width, flower_color)
+
+# Number of flowers to draw
+num_flowers = 200
+
+# Draw the flower garden
+flower_garden(num_flowers)
