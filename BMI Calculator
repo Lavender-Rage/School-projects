@@ -1,4 +1,4 @@
-//Python code that asks the user's input in order to calculate their BMI. 
+# Python code that asks the user's input in order to calculate their BMI. 
 
 height = float(input("Enter your height in inches  "))
 weight = float(input("Enter your weight in pounds  "))
